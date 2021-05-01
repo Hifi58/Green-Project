@@ -1,0 +1,471 @@
+/**La terre**/
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #000000;
+}
+
+.pulse
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: #ffffff;
+    background-image: url(image/earth.jpeg);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset 0 0 40px rgba(255,255,255,.5) ;
+}
+
+.pulse span
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #2c7211f6;
+    box-sizing: border-box;
+    animation: animate 6s linear infinite;
+}
+
+.pulse span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+.pulse span:nth-child(2)
+{
+    animation-delay: 2s;
+}
+.pulse span:nth-child(3)
+{
+    animation-delay: 4s;
+}
+@keyframes animate
+{
+    0%
+    {
+        width: 400px;
+        height: 400px;
+        opacity: 0.8;
+    }
+
+    50%
+    {
+        opacity: 0.5;
+    }
+
+    100%
+    {
+        width: 900px;
+        height: 900px;
+        opacity: 0;
+    }
+}
+
+/**Bouton d'entrer**/
+.container
+{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container .btn
+{
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+    top: 75px;
+}
+
+.container .btn a
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.container .btn:hover a
+{
+    letter-spacing: 5px;
+}
+
+.container .btn a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.container .btn:hover a::before
+{
+    transform: skewX(45deg) translateX(200%);
+}
+
+.container .btn::before
+{
+    content: '';
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #2c7211f6;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.container .btn:hover::before
+{
+    top: 16px;
+    height: 140%;
+    width: 170%;
+    border-radius: 60px;
+    transition-delay: 0.3s;
+}
+
+.container .btn:nth-child(1):before
+{
+    background: #4dc91cf6;
+    box-shadow: 0.0.5px #4dc91cf6,
+    0.0.15px #4dc91cf6,
+    0.0.20px #4dc91cf6,
+    0.0.30px #4dc91cf6;
+}
+
+/**bouton forum**/
+.container2
+{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container2 .btn2
+{
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+    top: 600px;
+    left: 1200px;
+}
+
+.container2 .btn2 a
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.container2 .btn2:hover a
+{
+    letter-spacing: 5px;
+}
+
+.container2 .btn2 a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.container2 .btn2:hover a::before
+{
+    transform: skewX(45deg) translateX(200%);
+}
+
+.container2 .btn2::before
+{
+    content: '';
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #c5850ff6;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.container2 .btn2:hover::before
+{
+    top: 16px;
+    height: 140%;
+    width: 170%;
+    border-radius: 60px;
+    transition-delay: 0.3s;
+}
+
+.container2 .btn2:nth-child(1):before
+{
+    background: #ee8e0ff6;
+    box-shadow: 0.0.5px #ee8e0ff6,
+    0.0.15px #ee8e0ff6,
+    0.0.20px #ee8e0ff6,
+    0.0.30px #ee8e0ff6;
+}
+
+/*contact*/
+
+.container3
+{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container3 .btn3
+{
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+    top: 500px;
+}
+
+.container3 .btn3 a
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.container3 .btn3:hover a
+{
+    letter-spacing: 5px;
+}
+
+.container3 .btn3 a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.container3 .btn3:hover a::before
+{
+    transform: skewX(45deg) translateX(200%);
+}
+
+.container3 .btn3::before
+{
+    content: '';
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #a31515f6;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.container3 .btn3:hover::before
+{
+    top: 16px;
+    height: 140%;
+    width: 170%;
+    border-radius: 60px;
+    transition-delay: 0.3s;
+}
+
+.container3 .btn3:nth-child(1):before
+{
+    background: #df1414f6;
+    box-shadow: 0.0.5px #df1414f6,
+    0.0.15px #df1414f6,
+    0.0.20px #df1414f6,
+    0.0.30px #df1414f6;
+}
+
+/*Application*/
+
+.container4
+{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container4 .btn4
+{
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+    top: -200px;
+    left: 1200px;
+}
+
+.container4 .btn4 a
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.container4 .btn4:hover a
+{
+    letter-spacing: 5px;
+}
+
+.container4 .btn4 a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.container4 .btn4:hover a::before
+{
+    transform: skewX(45deg) translateX(200%);
+}
+
+.container4 .btn4::before
+{
+    content: '';
+    position: absolute;
+    left: 100%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #1480b3f6;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.container4 .btn4:hover::before
+{
+    top: 16px;
+    height: 140%;
+    width: 170%;
+    border-radius: 60px;
+    transition-delay: 0.3s;
+}
+
+.container4 .btn4:nth-child(1):before
+{
+    background: #03ccf0f6;
+    box-shadow: 0.0.5px #03ccf0f6,
+    0.0.15px #03ccf0f6,
+    0.0.20px #03ccf0f6,
+    0.0.30px #03ccf0f6;
+}
